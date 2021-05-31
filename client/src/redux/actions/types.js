@@ -1,0 +1,1 @@
+export const DASH_SET_USERNAME = 'DASH_SET_USERNAME'
