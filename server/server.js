@@ -3,7 +3,7 @@ const socket = require('socket.io')
 
 const app = express()
 
-const PORT = 5000
+const PORT = 9000
 const server = app.listen(PORT, () => console.log(`Server on PORT:${PORT}`))
 
 const io = socket(server, {
@@ -16,5 +16,5 @@ const io = socket(server, {
 io.on('connection', (socket) => {
 	socket.emit('connection', null)
 	console.log('new user connected')
-	console.log(socket.io)
+	console.log(socket.id)
 })
